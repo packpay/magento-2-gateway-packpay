@@ -15,7 +15,7 @@ After that run these commands in your magento root direcory:
 1. ```php bin/magento setup:upgrade```
 2. ```php bin/magento setup:di:compile```
 3. ``` php bin/magento setup:static-content:deploy -f ```
-4. ```php bin/magento setup:di:compile```
+4. ``` php bin/magento cache:flush```
 
 If success, you can see packpay setting at Store > Configuration > Sales > Payment methods
 
