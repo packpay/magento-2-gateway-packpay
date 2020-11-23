@@ -1,0 +1,24 @@
+<?php
+/**
+ ** @var $this \Packpay\Gateway\Block\Redirect
+ */
+
+?>
+    <h3>
+        در حال اتصال به بانک
+    </h3>
+<?php
+$result=$this->sendToBank();
+
+if($result->status){
+    ?>
+    <script>
+        // Simulate an HTTP redirect:
+        window.location.replace("<?php echo $result->url?>");
+    </script>
+    <?php
+
+}else{
+    echo $result->msg;
+}
+?>
